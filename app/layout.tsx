@@ -15,15 +15,74 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://vertexstudio.io'),
+  metadataBase: new URL('https://websitebuildertask.netlify.app'),
   title: {
     default: 'VertexStudio — Brand Strategy & Digital Design Agency',
     template: '%s | VertexStudio',
   },
   description:
     'VertexStudio is a premium brand strategy and digital design agency helping ambitious brands grow through sharp strategy, stunning design, and technology that scales.',
-  keywords: ['digital agency', 'brand strategy', 'UI/UX design', 'web development'],
-  openGraph: { type: 'website', locale: 'en_US', siteName: 'VertexStudio' },
+  keywords: [
+    'digital agency',
+    'brand strategy',
+    'UI/UX design',
+    'web development',
+    'Brooklyn design studio',
+    'creative agency New York',
+    'premium branding',
+    'conversion optimization',
+  ],
+  authors: [{ name: 'VertexStudio' }],
+  creator: 'VertexStudio',
+  publisher: 'VertexStudio',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: 'VertexStudio — Brand Strategy & Digital Design Agency',
+    description: 'Helping ambitious brands grow through sharp strategy, stunning design, and technology that scales.',
+    url: 'https://websitebuildertask.netlify.app',
+    siteName: 'VertexStudio',
+    locale: 'en_US',
+    type: 'website',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'VertexStudio — Brand Strategy & Digital Design Agency',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'VertexStudio — Brand Strategy & Digital Design Agency',
+    description: 'Helping ambitious brands grow through sharp strategy, stunning design, and technology that scales.',
+    creator: '@vertexstudio',
+    images: ['/og-image.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  other: {
+    'geo.region': 'US-NY',
+    'geo.placename': 'Brooklyn',
+    'geo.position': '40.7142;-73.9614',
+    ICBM: '40.7142, -73.9614',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
